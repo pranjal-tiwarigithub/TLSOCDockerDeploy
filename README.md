@@ -228,30 +228,30 @@ sudo docker exec -it kafka   /opt/kafka/bin/kafka-console-consumer.sh   --bootst
 ```
 Real-time logs will be received
 
-### Quick TLSOC Kafka Admin Cheat Sheet
+# Quick TLSOC Kafka Admin Cheat Sheet
 ```
 cd /opt/TLSOCDockerDeploy/
 ```
-# List all topics
+### List all topics
 ```
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list
 ```
-# Describe topic
+### Describe topic
 ```
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --describe --topic <topic>
 
 ```
-# Live watch topic
+### Live watch topic
 ```
 docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic <topic>
 
 ```
-# Read from beginning
+### Read from beginning
 ```
 docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic <topic> --from-beginning
 
 ```
-# Approximate message count
+### Approximate message count
 ```
 docker exec -it kafka /opt/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list kafka:9092 --topic <topic>
 
